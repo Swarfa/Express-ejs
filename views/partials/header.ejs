@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%=title%></title>
+    <title><h1><%=title%></h1></title>
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/nodejs/node/master/src/res/node.ico" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/spacelab/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/sketchy/bootstrap.min.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
-            <a class="navbar-brand" href="#">My Website</a>
+            <a class="navbar-brand" href="#">Sharmarke Warfa</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -24,7 +24,10 @@
                         <a class="nav-link" href="/about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/users">users</a>
+                        <a class="nav-link" href="/users">Users</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/recipes">Recipes</a>
                     </li>
                 </ul>
             </div>
@@ -32,4 +35,15 @@
     </nav>
 
     <main class="container mt-4">
-    <!-- header ends here -->
+
+    <% if (message) { %>
+    <div class="alert alert-<%= message.type %> alert-dismissible fade show" role="alert">
+        <%= message.text %>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <% } %>
+
+   
+<!-- header ends here -->
