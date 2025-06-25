@@ -59,6 +59,15 @@ app.get('/about',(req,res)=>{
   res.render("pages/about", {"title": title});
 
 });
+// Cars page
+app.get("/cars", (req, res) => {
+  res.render("pages/cars", { title: "Cars" });
+});
+
+// Basketball page
+app.get("/basketball", (req, res) => {
+  res.render("pages/basketball", { title: "Basketball" });
+});
 
 //index/users URL
 app.get('/users',(req,res)=>{
